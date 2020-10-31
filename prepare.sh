@@ -7,6 +7,7 @@ else
 scram p CMSSW CMSSW_10_2_20_UL
 fi
 cd CMSSW_10_2_20_UL/src
+cmsenv
 eval `scram runtime -sh`
 
 # Configuration parameters
