@@ -13,15 +13,15 @@ eval `scram runtime -sh`
 # Configuration parameters
 
 fargment_pyfile="BPH-fragment.py"
-#fargment_pyfile="fragment.py"
+#fargment_pyfile="BPH-NoISR-fragment.py"
 #fargment_pyfile="fragment.py"
 
 run_configfile="BPH-run.py"
-#run_configfile="BPH-run.py"
+#run_configfile="BPH-NoISR-run.py"
 #run_configfile="BPH-run.py"
 
 result_root="BPH-result.root"
-#result_root="BPH-result.root"
+#result_root="BPH-NoISR-result.root"
 #result_root="BPH-result.root"
 
 EVENTS=250000
