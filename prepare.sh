@@ -9,5 +9,9 @@ fi
 cd CMSSW_10_2_20_UL/src
 eval `scram runtime -sh`
 
+pyfile="BPH-fragment.py"
+#pyfile="fragment.py"
+#pyfile="fragment.py"
+
 # Download fragment from myGitHub
-curl -s -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/BPH-RunIIFall18GS-00251 --retry 3 --create-dirs -o Configuration/GenProduction/python/BPH-RunIIFall18GS-00251-fragment.py
+curl -s -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/$pyfile --retry 3 --create-dirs -o Configuration/GenProduction/python/BPH-RunIIFall18GS-00251-fragment.py
