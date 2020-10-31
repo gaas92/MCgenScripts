@@ -14,4 +14,4 @@ pyfile="BPH-fragment.py"
 #pyfile="fragment.py"
 
 # Download fragment from myGitHub
-curl -s -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_fragment/$pyfile --retry 3 --create-dirs -o Configuration/GenProduction/python/BPH-RunIIFall18GS-00251-fragment.py
+curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/$pyfile --retry 3 --create-dirs -o Configuration/GenProduction/python/BPH-RunIIFall18GS-00251-fragment.py
