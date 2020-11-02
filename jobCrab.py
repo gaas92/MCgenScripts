@@ -7,12 +7,12 @@ config = config()
 ts = time.time()
 st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M')
 
-channel = 'b_kmumu_PHSPS'
+channel = 'ZtoJpsiMuMU'
 year = '2020'
 step = 'PrivateMC-'+year
-nEvents = 1000
-NJOBS = 2000
-myrun = "step0-GS-"+channel+"_cfg.py"
+nEvents = 100000
+NJOBS = 5
+mygen = "step0-GS-"+channel+"_cfg.py"
 #myrun = 'step0-GS-ups2s2ups1spipi_cfg.py'
 myname = step+'-'+channel
 
