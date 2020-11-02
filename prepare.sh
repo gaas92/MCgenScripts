@@ -11,18 +11,20 @@ cmsenv
 eval `scram runtime -sh`
 
 # Configuration parameters
+CHANNEL_DECAY="ZtoJpsiMuMu"
 
-fargment_pyfile="BPH-fragment.py"
-#fargment_pyfile="BPH-NoISR-fragment.py"
-#fargment_pyfile="fragment.py"
 
-run_configfile="BPH-run.py"
-#run_configfile="BPH-NoISR-run.py"
-#run_configfile="BPH-run.py"
+fargment_pyfile="${CHANNEL_DECAY}_BPH-fragment.py"
+#fargment_pyfile="${CHANNEL_DECAY}_BPH-NoISR-fragment.py"
+#fargment_pyfile="${CHANNEL_DECAY}_fragment.py"
 
-result_root="BPH-result.root"
-#result_root="BPH-NoISR-result.root"
-#result_root="BPH-result.root"
+run_configfile="step0-GS-${CHANNEL_DECAY}_BPH_run_cfg.py"
+#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-run_cfg.py"
+#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-run_cfg.py"
+
+result_root="step0-GS-${CHANNEL_DECAY}_BPH-result.root"
+#result_root="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-result.root"
+#result_root="step0-GS-${CHANNEL_DECAY}_BPH-result.root"
 
 EVENTS=250000
 

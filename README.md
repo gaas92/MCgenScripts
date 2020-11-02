@@ -52,6 +52,6 @@
 		- `doForceWidth:` a flag applicable only for resonances (see isResonance above), whereby it is possible to force resonances to retain their assigned width, whatever that is, see Resonance Decays for details.
 
 - Links: 
-	- (Electroweak Processes)[http://home.thep.lu.se/~torbjorn/pythia82html/ElectroweakProcesses.html]
-	- (The Particle Data Scheme)[http://home.thep.lu.se/~torbjorn/pythia82html/ParticleDataScheme.html]
-	- (ZZ pythia)[https://twiki.cern.ch/twiki/pub/CMSPublic/FCCeeHbbHccAnalysis/zz_cc.pythia]
+	- [Electroweak Processes](http://home.thep.lu.se/~torbjorn/pythia82html/ElectroweakProcesses.html)
+	- [The Particle Data Scheme](http://home.thep.lu.se/~torbjorn/pythia82html/ParticleDataScheme.html)
+	- [ZZ pythia](https://twiki.cern.ch/twiki/pub/CMSPublic/FCCeeHbbHccAnalysis/zz_cc.pythia)
