@@ -3,7 +3,7 @@
 START=0
 
 #Configuration 
-CHANNEL_DECAY="ZtoJpsiMuMU"
+CHANNEL_DECAY="ZtoJpsiMuMu"
 
 
 
