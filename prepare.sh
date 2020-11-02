@@ -7,7 +7,7 @@ else
 scram p CMSSW CMSSW_10_2_20_UL
 fi
 cd CMSSW_10_2_20_UL/src
-cmsenv
+
 eval `scram runtime -sh`
 
 # Configuration parameters
@@ -26,7 +26,7 @@ result_root="step0-GS-${CHANNEL_DECAY}_BPH-result.root"
 #result_root="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-result.root"
 #result_root="step0-GS-${CHANNEL_DECAY}_BPH-result.root"
 
-EVENTS=250000
+EVENTS=5
 
 
 # Download fragment from myGitHub
