@@ -40,7 +40,7 @@ config.JobType.maxMemoryMB = 3500
 config.JobType.scriptExe = 'gen_job.sh'
 #config.JobType.scriptArgs = ["0"]
 
-config.JobType.outputFiles = ['step0-GS-'+channel+gen_frag+'-result.root']
+#config.JobType.outputFiles = ['step0-GS-'+channel+gen_frag+'-result.root']
 #config.JobType.outputFiles = ['step0-GS-b_kmumu_PHSPS.root', 'step3-MiniAOD-b_kmumu_PHSPS.root', 'step4-NanoAOD-b_kmumu_PHSPS.root']
 
 config.Data.outputPrimaryDataset = myname
