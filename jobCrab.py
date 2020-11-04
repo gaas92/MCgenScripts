@@ -9,11 +9,13 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M')
 
 channel = 'ZtoJpsiMuMu'
 gen_frag = '_BPH'
+#gen_frag = '_BPH-NoISR'
+#gen_frag = '_BPH-NoISR-FW'
 gen_var = gen_frag+'_run_cfg.py'
 year = '2018'
 step = 'PrivateMC-'+year
-nEvents = 5
-NJOBS = 1
+nEvents = 2000
+NJOBS = 100
 mygen = "step0-GS-"+channel+gen_var
 #myrun = 'step0-GS-ups2s2ups1spipi_cfg.py'
 myname = step+'-'+channel
