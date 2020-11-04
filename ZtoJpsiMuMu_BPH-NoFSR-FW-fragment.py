@@ -21,7 +21,7 @@ generator = cms.EDFilter("Pythia8GeneratorFilter",
                        '23:addChannel 1 1.00 100 13 -13 443',
 #                       '23:addChannel 1 1.00 100 11 -11 443',
                        '23:onMode = off',
-                       '23:doForceWidth = on'
+                       '23:doForceWidth = yes'
                        '23:onIfMatch 13 -13 443',
 #                       '23:onIfMatch 11 -11 443',
                        '443:onMode = off',
