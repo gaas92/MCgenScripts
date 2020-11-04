@@ -19,8 +19,8 @@ fargment_pyfile="${CHANNEL_DECAY}_BPH-fragment.py"
 #fargment_pyfile="${CHANNEL_DECAY}_BPH-NoISR-FW-fragment.py"
 
 run_configfile="step0-GS-${CHANNEL_DECAY}_BPH_run_cfg.py"
-#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-run_cfg.py"
-#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-FW-run_cfg.py"
+#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR_run_cfg.py"
+#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-FW_run_cfg.py"
 
 result_root="step0-GS-${CHANNEL_DECAY}_BPH-result.root"
 #result_root="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-result.root"
