@@ -23,7 +23,7 @@ myname = step+'-'+channel
 config.General.requestName = step+'-'+channel+'-'+st
 config.General.transferOutputs = True
 config.General.transferLogs = False
-config.General.workArea = 'crab_'+step+'-'+channel
+config.General.workArea = 'crab_'+step+gen_frag+'-'+channel
 
 config.JobType.allowUndistributedCMSSW = True
 config.JobType.pluginName = 'PrivateMC'
