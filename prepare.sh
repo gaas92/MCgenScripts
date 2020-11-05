@@ -15,18 +15,21 @@ CHANNEL_DECAY="ZtoJpsiMuMu"
 
 
 fargment_pyfile="${CHANNEL_DECAY}_BPH-fragment.py"
+#fargment_pyfile="${CHANNEL_DECAY}_BPH-FW-fragment.py"
 #fargment_pyfile="${CHANNEL_DECAY}_BPH-NoISR-fragment.py"
 #fargment_pyfile="${CHANNEL_DECAY}_BPH-NoFSR-fragment.py"
 #fargment_pyfile="${CHANNEL_DECAY}_BPH-NoISR-FW-fragment.py"
 #fargment_pyfile="${CHANNEL_DECAY}_BPH-NoFSR-FW-fragment.py"
 
 run_configfile="step0-GS-${CHANNEL_DECAY}_BPH_run_cfg.py"
+#run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-FW_run_cfg.py"
 #run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR_run_cfg.py"
 #run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoFSR_run_cfg.py"
 #run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-FW_run_cfg.py"
 #run_configfile="step0-GS-${CHANNEL_DECAY}_BPH-NoFSR-FW_run_cfg.py"
 
 result_root="step0-GS-${CHANNEL_DECAY}_BPH-result.root"
+#result_root="step0-GS-${CHANNEL_DECAY}_BPH-FW-result.root"
 #result_root="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-result.root"
 #result_root="step0-GS-${CHANNEL_DECAY}_BPH-NoFSR-result.root"
 #result_root="step0-GS-${CHANNEL_DECAY}_BPH-NoISR-FW-result.root"
