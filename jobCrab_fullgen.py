@@ -32,7 +32,7 @@ config.JobType.pluginName = 'PrivateMC'
 config.JobType.psetName = mygen
 
 # For SIM  
-config.JobType.inputFiles = ["step1-PREMIXRAW-"+channel+gen_var,
+config.JobType.inputFiles = ['step1-PREMIXRAW-'+channel+gen_var,
                              'step2-AODSIM-'+channel+gen_var,
                              'step3-MINIAODSIM-'+channel+gen_var]
 
@@ -53,4 +53,6 @@ config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
 #config.Data.outLFNDirBase = '/store/user/hcrottel/'
 config.Data.publication = False
 
-config.Site.storageSite = 'T2_CH_CERNBOX'
+#config.Site.storageSite = 'T2_CH_CERNBOX'
+config.Data.outLFNDirBase = '/store/user/%s/Zpsi_mm_MINIAODSIM-BPH-FW/' % ("gayalasa")
+config.Site.storageSite = 'T3_US_FNALLPC'
