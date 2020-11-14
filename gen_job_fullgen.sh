@@ -50,7 +50,7 @@ then
 	cd ../../
 
 	echo "==================== PB: CMSRUN starting Reco step ===================="
-	cmsRun -e -j ${CHANNEL_DECAY}_step1.log step1-PREMIXRAW-${CHANNEL_DECAY}_BPH-FW_run_cfg.py
+	cmsRun -e -j ${CHANNEL_DECAY}_step1.log step1-PREMIXRAW-${CHANNEL_DECAY}_BPH-FW-NF_run_cfg.py
 	#cleaning
 	#rm -rfv step0-GS-${CHANNEL_DECAY}.root
 fi
@@ -68,7 +68,7 @@ then
 	scram b
 	cd ../../
 
-	cmsRun -e -j ${CHANNEL_DECAY}_step2.log step2-AODSIM-${CHANNEL_DECAY}_BPH-FW_run_cfg.py
+	cmsRun -e -j ${CHANNEL_DECAY}_step2.log step2-AODSIM-${CHANNEL_DECAY}_BPH-FW-NF_run_cfg.py
 fi
 
 if [ $START -le 3 ];
@@ -84,7 +84,7 @@ then
 	scram b
 	cd ../../
 
-	cmsRun -e -j FrameworkJobReport.xml  step3-MINIAODSIM-${CHANNEL_DECAY}_BPH-FW_run_cfg.py
+	cmsRun -e -j FrameworkJobReport.xml  step3-MINIAODSIM-${CHANNEL_DECAY}_BPH-FW-NF_run_cfg.py
 	#cleaning
 	#rm -rfv step2-DR-${CHANNEL_DECAY}.root
 fi

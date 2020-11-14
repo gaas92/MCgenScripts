@@ -9,7 +9,7 @@ st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d-%H-%M')
 
 channel = 'ZtoJpsiMuMu'
 #gen_frag = '_BPH'
-gen_frag = '_BPH-FW'
+gen_frag = '_BPH-FW-NF'
 #gen_frag = '_BPH-NoISR'
 #gen_frag = '_BPH-NoFSR'
 #gen_frag = '_BPH-NoFSR-FW'
@@ -54,5 +54,5 @@ config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
 config.Data.publication = False
 
 #config.Site.storageSite = 'T2_CH_CERNBOX'
-config.Data.outLFNDirBase = '/store/user/%s/Zpsi_mm_MINIAODSIM-BPH-FW/' % ("gayalasa")
+config.Data.outLFNDirBase = '/store/user/%s/Zpsi_mm_MINIAODSIM-BPH-FW-NF/' % ("gayalasa")
 config.Site.storageSite = 'T3_US_FNALLPC'
