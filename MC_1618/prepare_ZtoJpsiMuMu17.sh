@@ -20,7 +20,7 @@ step0_resultfile="step0-GS-${CHANNEL_DECAY}17_result.root"
 EVENTS=500
 
 # Download fragment from myGitHub
-curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/$step0_fragmentfile --retry 3 --create-dirs -o Configuration/GenProduction/python/$step0_fragmentfile
+curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/MC_1618/$step0_fragmentfile --retry 3 --create-dirs -o Configuration/GenProduction/python/$step0_fragmentfile
 scram b
 cd ../../
 

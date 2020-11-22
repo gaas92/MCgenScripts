@@ -15,12 +15,12 @@ eval `scram runtime -sh`
 # Configuration parameters
 CHANNEL_DECAY="ZtoJpsiMuMu18"
 step0_fragmentfile="${CHANNEL_DECAY}_fragment.py"
-step0_configfile="step0-GS-${CHANNEL_DECAY}_run_cfg.py"
-step0_resultfile="step0-GS-${CHANNEL_DECAY}_result.root"
+step0_configfile="step0-GS-${CHANNEL_DECAY}18_run_cfg.py"
+step0_resultfile="step0-GS-${CHANNEL_DECAY}18_result.root"
 EVENTS=500
 
 # Download fragment from myGitHub
-curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/$step0_fragmentfile --retry 3 --create-dirs -o Configuration/GenProduction/python/$step0_fragmentfile
+curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/MC_1618/$step0_fragmentfile --retry 3 --create-dirs -o Configuration/GenProduction/python/$step0_fragmentfile
 scram b
 cd ../../
 
@@ -43,8 +43,8 @@ scram b
 cd ../..
 
 # Configuration parameters
-step1_configfile="step1-PREMIXRAW-${CHANNEL_DECAY}_run_cfg.py"
-step1_resultfile="step1-PREMIXRAW-${CHANNEL_DECAY}_result.root"
+step1_configfile="step1-PREMIXRAW-${CHANNEL_DECAY}18_run_cfg.py"
+step1_resultfile="step1-PREMIXRAW-${CHANNEL_DECAY}18_result.root"
 
 # taken from https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/BPH-RunIIAutumn18DRPremix-00163
 # cmsDriver command for DIGI,DATAMIX,L1,DIGI2RAW,HLT step1
@@ -56,8 +56,8 @@ sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServi
 #same CMSSW
 
 # Configuration parameters
-step2_configfile="step2-AODSIM-${CHANNEL_DECAY}_run_cfg.py"
-step2_resultfile="step2-AODSIM-${CHANNEL_DECAY}_result.root"
+step2_configfile="step2-AODSIM-${CHANNEL_DECAY}18_run_cfg.py"
+step2_resultfile="step2-AODSIM-${CHANNEL_DECAY}18_result.root"
 
 # cmsDriver command for RAW2DIGI,L1Reco,RECO,RECOSIM,EI step2
 cmsDriver.py  --python_filename $step2_configfile --eventcontent AODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier AODSIM --fileout file:$step2_resultfile --conditions 102X_upgrade2018_realistic_v15 --step RAW2DIGI,L1Reco,RECO,RECOSIM,EI --procModifiers premix_stage2 --filein file:$step1_resultfile --era Run2_2018 --runUnscheduled --no_exec --mc -n $EVENTS; 
@@ -68,8 +68,8 @@ sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServi
 #same CMSSW
 
 # Configuration parameters 
-step3_configfile="step3-MINIAODSIM-${CHANNEL_DECAY}_run_cfg.py"
-step3_resultfile="step3-MINIAODSIM-${CHANNEL_DECAY}_result.root"
+step3_configfile="step3-MINIAODSIM-${CHANNEL_DECAY}18_run_cfg.py"
+step3_resultfile="step3-MINIAODSIM-${CHANNEL_DECAY}18_result.root"
 
 # cmsDriver command for MINIAOD
 cmsDriver.py  --python_filename $step3_configfile --eventcontent MINIAODSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier MINIAODSIM --fileout file:$step3_resultfile --conditions 102X_upgrade2018_realistic_v15 --step PAT --geometry DB:Extended --filein file:$step2_resultfile --era Run2_2018 --runUnscheduled --no_exec --mc -n $EVENTS;

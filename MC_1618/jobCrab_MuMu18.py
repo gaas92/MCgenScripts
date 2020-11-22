@@ -54,5 +54,5 @@ config.Data.totalUnits = config.Data.unitsPerJob * NJOBS
 config.Data.publication = False
 
 #config.Site.storageSite = 'T2_CH_CERNBOX'
-config.Data.outLFNDirBase = '/store/user/%s/Zpsi_mm_MINIAODSIM-BPH-FW-NF/' % ("gayalasa")
+config.Data.outLFNDirBase = '/store/user/%s/Zpsi_MuMu_FWMC/' % ("gayalasa")
 config.Site.storageSite = 'T3_US_FNALLPC'
