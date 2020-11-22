@@ -4,12 +4,12 @@
 # step0 GEN-SIM
 export SCRAM_ARCH=slc7_amd64_gcc481
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-if [ -r CMSSW_7_1_25_patch1/src ] ; then
-  echo release CMSSW_7_1_25_patch1 already exists
+if [ -r CMSSW_7_6_7/src ] ; then
+  echo release CMSSW_7_6_7 already exists
 else
-  scram p CMSSW CMSSW_7_1_25_patch1
+  scram p CMSSW_7_6_7
 fi
-cd CMSSW_7_1_25_patch1/src
+cd CMSSW_7_6_7/src
 eval `scram runtime -sh`
 
 # Configuration parameters
