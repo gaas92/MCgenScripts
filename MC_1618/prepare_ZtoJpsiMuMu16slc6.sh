@@ -41,7 +41,7 @@ cmsDriver.py Configuration/GenProduction/python/$step0_fragmentfile  --python_fi
 sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper \nrandSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)\nrandSvc.populate()" $step0_configfile
 
 # step1 DIGI, DATAMIX, L1, DIGIRAW, HLT
-export SCRAM_ARCH=slc7_amd64_gcc530
+export SCRAM_ARCH=slc6_amd64_gcc530
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 if [ -r CMSSW_8_0_21/src ] ; then
   echo release CMSSW_8_0_21 already exists
@@ -87,7 +87,7 @@ step3_configfile="step3-MINIAODSIM-${CHANNEL_DECAY}16_run_cfg.py"
 step3_resultfile="step3-MINIAODSIM-${CHANNEL_DECAY}16_result.root"
 
 # cmsDriver command for MINIAOD
-export SCRAM_ARCH=slc7_amd64_gcc530
+export SCRAM_ARCH=slc6_amd64_gcc530
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 if [ -r CMSSW_8_0_21/src ] ; then
   echo release CMSSW_8_0_21 already exists
