@@ -17,7 +17,7 @@ CHANNEL_DECAY="ZtoJpsiEE"
 step0_fragmentfile="${CHANNEL_DECAY}_fragment.py"
 step0_configfile="step0-GS-${CHANNEL_DECAY}17_run_cfg.py"
 step0_resultfile="step0-GS-${CHANNEL_DECAY}17_result.root"
-EVENTS=2000
+EVENTS=500
 
 # Download fragment from myGitHub
 curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/MC_1618/$step0_fragmentfile --retry 3 --create-dirs -o Configuration/GenProduction/python/$step0_fragmentfile
