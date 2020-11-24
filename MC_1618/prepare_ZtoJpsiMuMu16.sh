@@ -3,14 +3,15 @@
 
 # step0 GEN-SIM
 #slc7_amd64_gcc491
-export SCRAM_ARCH=slc7_amd64_gcc493
+#export SCRAM_ARCH=slc7_amd64_gcc493
+export SCRAM_ARCH=slc7_amd64_gcc530
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-if [ -r CMSSW_7_6_7/src ] ; then
-  echo release CMSSW_7_6_7 already exists
+if [ -r CMSSW_8_0_21/src ] ; then
+  echo release CMSSW_8_0_21 already exists
 else
-  scram p CMSSW_7_6_7
+  scram p CMSSW_8_0_21
 fi
-cd CMSSW_7_6_7/src
+cd CMSSW_8_0_21/src
 eval `scram runtime -sh`
 
 # Configuration parameters
@@ -22,6 +23,8 @@ EVENTS=2000
 
 # Download fragment from myGitHub
 curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/MC_1618/$step0_fragmentfile --retry 3 --create-dirs -o Configuration/GenProduction/python/$step0_fragmentfile
+# curl -s -k https://raw.githubusercontent.com/gaas92/MCgenScripts/master/MC_1618/ZtoJpsiMuMu_fragment.py --retry 3 --create-dirs -o Configuration/GenProduction/python/ZtoJpsiMuMu_fragment.py 
+
 scram b
 cd ../../
 
@@ -30,7 +33,7 @@ cd ../../
 #cmsDriver.py Configuration/GenProduction/python/$step0_fragmentfile --eventcontent RAWSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --conditions 102X_upgrade2018_realistic_v11 --beamspot Realistic25ns13TeVEarly2018Collision --step GEN,SIM --geometry DB:Extended --era Run2_2018 --python_filename $step0_configfile --fileout file:$step0_resultfile --no_exec --mc -n $EVENTS; 
 #cmsDriver.py Configuration/GenProduction/python/$step0_fragmentfile --eventcontent RAWSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --conditions 93X_mc2017_realistic_v3 --beamspot Realistic25ns13TeVEarly2017Collision --step GEN,SIM --geometry DB:Extended --era Run2_2017 --python_filename $step0_configfile --fileout file:$step0_resultfile --no_exec --mc -n $EVENTS;
 cmsDriver.py Configuration/GenProduction/python/$step0_fragmentfile --eventcontent RAWSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --python_filename $step0_configfile --fileout file:$step0_resultfile --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --no_exec --mc -n $EVENTS;
-# cmsDriver.py Configuration/GenProduction/python/ZtoJpsiMuMu_fragment.py --eventcontent RAWSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --python_filename step0-GS-ZtoJpsiMuMu16_run_cfg.py --fileout file:step0-GS-ZtoJpsiMuMu16_result.root --conditions MCRUN2_71_V1::All --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --no_exec --mc -n 10;
+# cmsDriver.py Configuration/GenProduction/python/ZtoJpsiMuMu_fragment.py --eventcontent RAWSIM --customise Configuration/DataProcessing/Utils.addMonitoring --datatier GEN-SIM --python_filename step0-GS-ZtoJpsiMuMu16_run_cfg.py --fileout file:step0-GS-ZtoJpsiMuMu16_result.root --conditions  80X_mcRun2_asymptotic_2016_miniAODv2_v0 --beamspot Realistic50ns13TeVCollision --step GEN,SIM --magField 38T_PostLS1 --no_exec --mc -n 10;
 
 sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper \nrandSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)\nrandSvc.populate()" $step0_configfile
 
