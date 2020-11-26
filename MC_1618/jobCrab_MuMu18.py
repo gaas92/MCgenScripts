@@ -44,7 +44,7 @@ config.JobType.scriptExe = 'gen_job_MuMu18.sh'
 #config.JobType.scriptArgs = ["0"]
 
 #config.JobType.outputFiles = ['step0-GS-'+channel+gen_frag+'-result.root']
-config.JobType.outputFiles = ['step3-MINIAODSIM-'+channel+gen_frag+'-result.root']
+config.JobType.outputFiles = ['step0-GS-'+channel+gen_frag+'_result.root','step3-MINIAODSIM-'+channel+gen_frag+'-result.root']
 
 config.Data.outputPrimaryDataset = myname
 config.Data.splitting = 'EventBased'

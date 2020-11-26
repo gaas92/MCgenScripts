@@ -13,7 +13,7 @@ cd CMSSW_10_2_20_UL/src
 eval `scram runtime -sh`
 
 # Configuration parameters
-CHANNEL_DECAY="ZtoJpsiMuMu18"
+CHANNEL_DECAY="ZtoJpsiMuMu"
 step0_fragmentfile="${CHANNEL_DECAY}_fragment.py"
 step0_configfile="step0-GS-${CHANNEL_DECAY}18_run_cfg.py"
 step0_resultfile="step0-GS-${CHANNEL_DECAY}18_result.root"
